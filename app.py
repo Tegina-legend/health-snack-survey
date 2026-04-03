@@ -254,131 +254,246 @@ st.markdown("""
 
     html, body, [class*="css"] {
         font-family: 'DM Sans', sans-serif;
+        background-color: #ffffff !important;
+        color: #000000 !important;
     }
 
+    /* ── Force Streamlit app background to white ── */
+    .stApp {
+        background-color: #ffffff !important;
+    }
+
+    .block-container {
+        background-color: #ffffff !important;
+    }
+
+    /* ── Global text overrides — all black ── */
+    p, span, div, label, li, a,
+    .stMarkdown p, .stMarkdown li, .stMarkdown span,
+    label, .stRadio label, .stSelectbox label,
+    .stTextInput label, .stFileUploader label,
+    .stMarkdown, .stText, .stCaption,
+    [class*="css"] {
+        color: #000000 !important;
+    }
+
+    /* ── Titles ── */
     .survey-title {
         font-family: 'DM Serif Display', serif;
         font-size: 2.6rem;
-        color: #1a1a2e;
+        color: #000000 !important;
         line-height: 1.15;
         margin-bottom: 0.2rem;
     }
 
     .survey-subtitle {
         font-size: 1.05rem;
-        color: #555;
+        color: #000000 !important;
         margin-bottom: 2rem;
     }
 
+    /* ── Cards ── */
     .card {
-        background: #ffffff;
+        background: #f8f9fa;
         border-radius: 16px;
         padding: 2rem 2.2rem;
-        box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+        box-shadow: 0 4px 24px rgba(0,0,0,0.08);
         margin-bottom: 1.5rem;
-        border: 1px solid #f0f0f0;
+        border: 1px solid #dee2e6;
+        color: #000000 !important;
     }
 
+    .card p, .card span, .card div, .card label {
+        color: #000000 !important;
+    }
+
+    /* ── Question page ── */
     .question-chip {
         display: inline-block;
         background: #eef2ff;
-        color: #4f46e5;
+        color: #000000 !important;
         font-size: 0.75rem;
-        font-weight: 600;
+        font-weight: 700;
         letter-spacing: 0.08em;
-        padding: 3px 10px;
+        padding: 4px 12px;
         border-radius: 20px;
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.75rem;
         text-transform: uppercase;
     }
 
-    .question-text {
-        font-size: 1.05rem;
-        font-weight: 500;
-        color: #1a1a2e;
-        margin-bottom: 0.4rem;
+    .question-card {
+        background: #f8f9fa;
+        border-radius: 16px;
+        padding: 1.8rem 2rem;
+        border: 2px solid #dee2e6;
+        margin-bottom: 1.2rem;
+        box-shadow: 0 2px 12px rgba(0,0,0,0.06);
     }
 
+    .question-text {
+        font-size: 1.2rem !important;
+        font-weight: 600 !important;
+        color: #000000 !important;
+        line-height: 1.55;
+        margin: 0 0 0.3rem 0;
+    }
+
+    /* Radio option labels — force black text */
+    .stRadio > div > label,
+    .stRadio > div > label > div,
+    .stRadio > div > label span {
+        color: #000000 !important;
+        font-size: 1rem !important;
+        font-weight: 400 !important;
+    }
+
+    /* ── Result box (keeps colored bg, white text inside) ── */
     .result-box {
-        border-radius: 16px;
-        padding: 2rem;
-        color: white;
+        border-radius: 20px;
+        padding: 2.5rem 2rem;
+        color: #ffffff !important;
         text-align: center;
-        margin: 1.5rem 0;
+        margin: 1rem 0 1.8rem;
+        box-shadow: 0 8px 32px rgba(0,0,0,0.15);
     }
 
     .result-label {
         font-family: 'DM Serif Display', serif;
-        font-size: 2rem;
-        margin-bottom: 0.5rem;
+        font-size: 2.2rem;
+        color: #ffffff !important;
+        margin-bottom: 0.6rem;
+        text-shadow: 0 2px 8px rgba(0,0,0,0.2);
     }
 
     .result-message {
-        font-size: 1rem;
-        opacity: 0.95;
-        line-height: 1.6;
+        font-size: 1.05rem;
+        color: #ffffff !important;
+        opacity: 1;
+        line-height: 1.7;
+        max-width: 520px;
+        margin: 0 auto;
     }
 
     .score-pill {
         display: inline-block;
-        background: rgba(255,255,255,0.25);
-        padding: 6px 18px;
+        background: rgba(255,255,255,0.28);
+        border: 2px solid rgba(255,255,255,0.5);
+        padding: 7px 22px;
         border-radius: 30px;
-        font-weight: 600;
+        font-weight: 700;
         font-size: 1.1rem;
-        margin-top: 1rem;
+        color: #ffffff !important;
+        margin-top: 1.2rem;
+        letter-spacing: 0.03em;
     }
 
-    .progress-bar-bg {
-        background: #e9ecef;
-        border-radius: 10px;
-        height: 10px;
-        margin: 0.5rem 0 1.2rem;
-        overflow: hidden;
-    }
-
-    .stButton > button {
-        background: #4f46e5;
-        color: white;
-        border: none;
-        border-radius: 10px;
-        padding: 0.55rem 1.6rem;
-        font-weight: 600;
-        font-size: 0.95rem;
-        transition: background 0.2s;
-        width: 100%;
-    }
-
-    .stButton > button:hover {
-        background: #3730a3;
-        color: white;
-    }
-
-    .stRadio > div {
-        gap: 6px;
-    }
-
+    /* ── Info rows ── */
     .section-header {
         font-family: 'DM Serif Display', serif;
         font-size: 1.5rem;
-        color: #1a1a2e;
+        color: #000000 !important;
         margin-bottom: 1rem;
-        border-bottom: 2px solid #eef2ff;
+        border-bottom: 2px solid #dee2e6;
         padding-bottom: 0.4rem;
     }
 
     .info-row {
         display: flex;
         justify-content: space-between;
-        padding: 0.4rem 0;
-        border-bottom: 1px solid #f5f5f5;
+        padding: 0.5rem 0;
+        border-bottom: 1px solid #e9ecef;
         font-size: 0.95rem;
     }
-    .info-key { color: #777; font-weight: 500; }
-    .info-val { color: #1a1a2e; font-weight: 600; }
+    .info-key { color: #333333 !important; font-weight: 500; }
+    .info-val { color: #000000 !important; font-weight: 700; }
 
-    hr { border: none; border-top: 1px solid #eee; margin: 1.5rem 0; }
+    /* ── Buttons ── */
+    .stButton > button {
+        background: #4f46e5 !important;
+        color: #ffffff !important;
+        border: none;
+        border-radius: 10px;
+        padding: 0.6rem 1.6rem;
+        font-weight: 600;
+        font-size: 0.97rem;
+        transition: background 0.2s, transform 0.1s;
+        width: 100%;
+    }
+    .stButton > button:hover {
+        background: #3730a3 !important;
+        color: #ffffff !important;
+        transform: translateY(-1px);
+    }
+
+    /* ── Input fields ── */
+    .stTextInput input {
+        background-color: #f8f9fa !important;
+        color: #000000 !important;
+        border: 1px solid #ced4da !important;
+    }
+
+    .stSelectbox > div > div {
+        background-color: #f8f9fa !important;
+        color: #000000 !important;
+    }
+
+    /* ── Selectbox dropdown text ── */
+    .stSelectbox [data-baseweb="select"] span,
+    .stSelectbox [data-baseweb="select"] div {
+        color: #000000 !important;
+    }
+
+    /* ── Caption / footer ── */
+    .stCaption, caption, small {
+        color: #333333 !important;
+    }
+
+    hr { border: none; border-top: 1px solid #dee2e6; margin: 1.5rem 0; }
+
+    /* ══════════════════════════════════
+       CONFETTI CELEBRATION ANIMATION
+    ══════════════════════════════════ */
+    #confetti-canvas {
+        position: fixed;
+        top: 0; left: 0;
+        width: 100vw;
+        height: 100vh;
+        pointer-events: none;
+        z-index: 9999;
+    }
+
+    .celebration-banner {
+        text-align: center;
+        padding: 1rem 0 0.2rem;
+        animation: popIn 0.6s cubic-bezier(0.34,1.56,0.64,1) both;
+    }
+
+    .celebration-banner .big-emoji {
+        font-size: 3.5rem;
+        display: block;
+        animation: bounce 1s ease infinite alternate;
+    }
+
+    .celebration-banner .congrats-text {
+        font-family: 'DM Serif Display', serif;
+        font-size: 1.6rem;
+        color: #000000 !important;
+        margin-top: 0.3rem;
+    }
+
+    @keyframes popIn {
+        0%   { opacity: 0; transform: scale(0.5); }
+        100% { opacity: 1; transform: scale(1); }
+    }
+
+    @keyframes bounce {
+        0%   { transform: translateY(0px); }
+        100% { transform: translateY(-10px); }
+    }
 </style>
+
+<!-- Confetti canvas (hidden by default, shown via JS on results page) -->
+<canvas id="confetti-canvas"></canvas>
 """, unsafe_allow_html=True)
 
 
@@ -504,11 +619,15 @@ def page_survey():
 
     q: dict = questions[current]
 
-    st.markdown(f'<span class="question-chip">Question {current + 1}</span>', unsafe_allow_html=True)
-    st.markdown(f'<p class="question-text">{q["text"]}</p>', unsafe_allow_html=True)
+    st.markdown(f"""
+    <div class="question-card">
+        <span class="question-chip">Question {current + 1} of {total}</span>
+        <p class="question-text">{q["text"]}</p>
+    </div>
+    """, unsafe_allow_html=True)
 
     options: list    = q["options"]
-    selected         = st.radio("Choose your answer:", options, key=f"q_{current}", index=None)
+    selected         = st.radio("Select your answer:", options, key=f"q_{current}", index=None)
 
     col_back, col_next = st.columns([1, 2])
 
@@ -557,13 +676,107 @@ def page_survey():
 def page_results():
     rd: dict = st.session_state.result_data
 
+    # ── Celebration banner & confetti ──────────────────────────────
+    score: int = rd.get("score", 0)
+    is_positive: bool = score <= 36  # Excellent / Good / Moderate = celebrate
+
+    if is_positive:
+        st.markdown("""
+        <div class="celebration-banner">
+            <span class="big-emoji">🎉</span>
+            <div class="congrats-text">Survey Complete — Great job finishing!</div>
+        </div>
+        """, unsafe_allow_html=True)
+    else:
+        st.markdown("""
+        <div class="celebration-banner">
+            <span class="big-emoji">📋</span>
+            <div class="congrats-text">Survey Complete — Here are your results</div>
+        </div>
+        """, unsafe_allow_html=True)
+
+    # Confetti JS — launches automatically on results page
+    confetti_js = """
+    <script>
+    (function() {
+        var canvas = document.getElementById('confetti-canvas');
+        if (!canvas) return;
+        var ctx = canvas.getContext('2d');
+        canvas.width  = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        var colors = ['#4f46e5','#2ecc71','#f39c12','#e74c3c','#9b59b6','#3498db','#1abc9c','#e67e22'];
+        var pieces = [];
+        var NUM    = PIECE_COUNT;
+
+        for (var i = 0; i < NUM; i++) {
+            pieces.push({
+                x:     Math.random() * canvas.width,
+                y:     Math.random() * canvas.height - canvas.height,
+                w:     Math.random() * 12 + 6,
+                h:     Math.random() * 6 + 4,
+                color: colors[Math.floor(Math.random() * colors.length)],
+                rot:   Math.random() * 360,
+                rspd:  (Math.random() - 0.5) * 4,
+                spd:   Math.random() * 3 + 2,
+                swing: Math.random() * 2 - 1,
+                alpha: 1
+            });
+        }
+
+        var frame = 0;
+        var MAX_FRAMES = 220;
+
+        function draw() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            frame++;
+
+            pieces.forEach(function(p) {
+                p.y    += p.spd;
+                p.x    += p.swing * Math.sin(frame * 0.05);
+                p.rot  += p.rspd;
+                if (frame > MAX_FRAMES - 60) {
+                    p.alpha = Math.max(0, p.alpha - 0.025);
+                }
+                ctx.save();
+                ctx.globalAlpha = p.alpha;
+                ctx.translate(p.x + p.w / 2, p.y + p.h / 2);
+                ctx.rotate(p.rot * Math.PI / 180);
+                ctx.fillStyle = p.color;
+                ctx.fillRect(-p.w / 2, -p.h / 2, p.w, p.h);
+                ctx.restore();
+            });
+
+            if (frame < MAX_FRAMES) {
+                requestAnimationFrame(draw);
+            } else {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+            }
+        }
+
+        // small delay so canvas is ready
+        setTimeout(draw, 300);
+
+        window.addEventListener('resize', function() {
+            canvas.width  = window.innerWidth;
+            canvas.height = window.innerHeight;
+        });
+    })();
+    </script>
+    """
+
+    # Only fire confetti for positive outcomes
+    if is_positive:
+        st.markdown(confetti_js.replace("PIECE_COUNT", "160"), unsafe_allow_html=True)
+    else:
+        st.markdown(confetti_js.replace("PIECE_COUNT", "40"), unsafe_allow_html=True)
+
     st.markdown('<p class="section-header">📊 Your Results</p>', unsafe_allow_html=True)
 
     # Result card
     color: str = rd.get("color", "#4f46e5")
     label: str = rd.get("label", "")
     msg: str   = rd.get("message", "")
-    score: int = rd.get("score", 0)
     pct: float = rd.get("percentage", 0.0)
 
     st.markdown(f"""
